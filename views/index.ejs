@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pics</title>
+</head>
+
+<body>
+  <main>  
+    <h3>All resized version from AWS</h3>
+    <br><br>
+    <div>
+      <% for (let image of data) { %>
+        <!-- <div><%= image %></div> -->
+        <div style="margin: 15px; display: flex;">
+          <img src="<%= image %>" alt="aws-image">
+        </div>
+      <% } %>
+    </div>
+
+  </main>
+</body>
+
+</html>

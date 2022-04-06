@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add File</title>
+</head>
+
+<body>
+    <main>
+        <form action="/s3Url" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" onchange="details">
+            <button type="submit">Add File</button>
+        </form>
+    </main>
+</body>
+
+<script>
+    function details(){
+        const img = new Image();
+        img.onload = function() {
+          console.log(this.width + 'x' + this.height);
+        }
+        img.src = "https://aws-test-photos-resize.s3.amazonaws.com/bWlGJZJL.jpg";
+    }
+</script>
+
+</html>
