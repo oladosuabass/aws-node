@@ -12,6 +12,11 @@
   <main>  
     <h3>All resized version from AWS</h3>
     <br><br>
+    <% if (data.length < 1) { %>
+      <h4>No image to display</h4>
+      <a href="/upload-image">Upload an image</a>
+    <% } %>
+
     <div>
       <% for (let image of data) { %>
         <!-- <div><%= image %></div> -->
@@ -20,7 +25,6 @@
         </div>
       <% } %>
     </div>
-
   </main>
 </body>
 
